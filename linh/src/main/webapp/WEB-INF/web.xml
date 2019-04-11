@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>new</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet> <!-- <servlet> : Đây là phần tử con của và đại diện cho servlet -->
+        <servlet-name>dispatcher</servlet-name><!-- Đây là phần tử con của servlet và được sử dụng để đại diện cho tên của servlet -->
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class> <!-- Đây là phần tử con của servlet và được sử dụng để đại diện cho lớp servlet. -->
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+   	 	<servlet-name>dispatcher</servlet-name>
+    	<url-pattern>/</url-pattern>
+    </servlet-mapping>
+</web-app>
+<!-- <servlet-mapping> : Đây là phần tử con của và được sử dụng để ánh xạ servlet
+<url-pattern> : Đây là phần tử con của servlet-mapping và được sử dụng cho phía máy khách để gọi servlet, hay nói cách khác là url tương ứng cho servlet. -->
